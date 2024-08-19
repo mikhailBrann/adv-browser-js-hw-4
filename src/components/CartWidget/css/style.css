@@ -1,0 +1,37 @@
+.maestro {background-image: url(../img/maestro.png);}
+.master-card {background-image: url(../img/master-card.png);}
+.mir {background-image: url(../img/mir.png);}
+.visa {background-image: url(../img/visa.png);}
+
+.card-validator__pay-type {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.card-validator__pay-type-item {
+    width: 45px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card-validator__pay-type-item:not(.active) {
+    filter: grayscale(1);
+}
+
+
+.card-validator input[data-card-is-valid="yes"] {
+    border-color: green;
+}
+
+.card-validator input[data-card-is-valid="no"] {
+    border-color: red;
+}
+
+input[data-type="card-number"] {
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border: 2px solid silver;
+}

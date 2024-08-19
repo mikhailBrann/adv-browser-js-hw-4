@@ -8,8 +8,9 @@
     "start_port": "webpack serve --config webpack.dev.js --port $PORT",
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint . --fix",
-    "test": "jest",
+    "test": "jest --testPathPattern=./src/components/CartWidget/__tests__/ --runInBand",
     "coverage": "jest --coverage",
+    "e2e": "jest --testPathPattern=./src/components/CartWidget/e2e/ --runInBand",
     "preshow:coverage": "npm run coverage",
     "show:coverage": "live-server coverage/lcov-report",
     "preshow:dist": "npm run build",
@@ -43,6 +44,9 @@
   },
   "dependencies": {
     "jest-dom": "^4.0.0",
-    "jsdom": "^24.1.1"
+    "jsdom": "^24.1.1",
+    "path-browserify": "^1.0.1",
+    "pug": "^3.0.3",
+    "puppeteer": "^23.1.0"
   }
 }
